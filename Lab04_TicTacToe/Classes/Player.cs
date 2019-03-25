@@ -78,6 +78,8 @@ namespace Lab04_TicTacToe.Classes
 			else
 			{
 				Console.WriteLine("This space is already occupied");
+                // Reset position like so? position = GetPosition(board);
+                // Need to have this if-else inside while loop that keeps looping until user gives valid input?
 			}
 		}
 	}

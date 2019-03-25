@@ -33,36 +33,6 @@ namespace Lab04_TicTacToe.Classes
 
             //TODO: Complete this method and utilize the rest of the class structure to play the game.
 
-            Board.DisplayBoard();
-            int turns = 0;
-            // bool = 
-
-            while (turns < 9 && CheckForWinner() == false)
-            {
-                Player.TakeTurn(game.Board);
-
-                turns++;
-            }
-
-            return CheckForWinner();
-
-            // WHILE (positions still open on board?)
-            // Player1 takes turn
-            // Show board
-            // Prompt user to select position they want to play
-                // Call TakeTurn() method from Player class
-
-            // Update board at desired position with player's mark (X or O)
-            // Display updated board (or wait to show until next player's turn)?
-            // Let player know when their turn is over
-            // Check board for winner at end of each turn
-            // Switch to next player's turn
-            // Player2 takes turn
-            // Show board
-            // Prompt user to select position, etc...
-            // IF no winner yet, repeat game
-
-
             /*
              * Complete this method by constructing the logic for the actual playing of Tic Tac Toe. 
              * 
@@ -77,6 +47,37 @@ namespace Lab04_TicTacToe.Classes
 
             Use any and all pre-existing methods in this program to help construct the method logic. 
              */
+
+            Board.DisplayBoard();
+            int turns = 0;
+            // bool = 
+
+            //while (turns < 9 && CheckForWinner() == false)
+            //{
+            //    Player.TakeTurn(game.Board);
+
+            //    turns++;
+            //}
+
+            //return CheckForWinner();
+
+
+            // WHILE (positions still open on board?)
+            // Player1 takes turn
+            // Show board
+            // Prompt user to select position they want to play
+            // Call TakeTurn() method from Player class
+
+            // Update board at desired position with player's mark (X or O)
+            // Display updated board (or wait to show until next player's turn)?
+            // Let player know when their turn is over
+            // Check board for winner at end of each turn
+            // Switch to next player's turn
+            // Player2 takes turn
+            // Show board
+            // Prompt user to select position, etc...
+            // IF no winner yet, repeat game
+
         }
 
 
@@ -115,11 +116,12 @@ namespace Lab04_TicTacToe.Classes
                 // TODO:  Determine a winner has been reached. 
 
                 // [IF all 3 items in a given array in "winners" jagged array are same as each other, we have a winner]
-                if ( (a == b) && (a == c) )
-                {
-                    // return true if a winner has been reached. 
-                    return true;
-                }
+                // Need to test for whether there are remaining blank positions on game board?
+                //if ( (a == b) && (a == c) )
+                //{
+                //    // return true if a winner has been reached. 
+                //    return true;
+                //}
             }
 
             return false;
