@@ -31,7 +31,30 @@ namespace Lab04_TicTacToe.Classes
 		public Player Play()
 		{
 
-			//TODO: Complete this method and utilize the rest of the class structure to play the game.
+            //TODO: Complete this method and utilize the rest of the class structure to play the game.
+
+            Board.DisplayBoard();
+
+            int turns = 0;
+            //bool
+
+            return Winner;
+
+            // WHILE (positions still open on board?)
+            // Player1 takes turn
+            // Show board
+            // Prompt user to select position they want to play
+            // Update board at desired position with player's mark (X or O)
+            // Display updated board (or wait to show until next player's turn)?
+            // Let player know when their turn is over
+            // Check board for winner at end of each turn
+            // Switch to next player's turn
+            // Player2 takes turn
+            // Show board
+            // Prompt user to select position, etc...
+            // IF no winner yet, repeat game
+            // IF all 3 items in a given array in winners[][] jagged array are same as each other, we have a winner
+
 
             /*
              * Complete this method by constructing the logic for the actual playing of Tic Tac Toe. 
@@ -47,15 +70,15 @@ namespace Lab04_TicTacToe.Classes
 
             Use any and all pre-existing methods in this program to help construct the method logic. 
              */
-		}
+        }
 
 
-		/// <summary>
-		/// Check if winner exists
-		/// </summary>
-		/// <param name="board">current state of the board</param>
-		/// <returns>if winner exists</returns>
-		public bool CheckForWinner(Board board)
+        /// <summary>
+        /// Check if winner exists
+        /// </summary>
+        /// <param name="board">current state of the board</param>
+        /// <returns>if winner exists</returns>
+        public bool CheckForWinner(Board board)
 		{
 			int[][] winners = new int[][]
 			{
@@ -107,10 +130,7 @@ namespace Lab04_TicTacToe.Classes
 		{
 			if (PlayerOne.IsTurn)
 			{
-              
 				PlayerOne.IsTurn = false;
-
-              
 				PlayerTwo.IsTurn = true;
 			}
 			else
@@ -119,7 +139,5 @@ namespace Lab04_TicTacToe.Classes
 				PlayerTwo.IsTurn = false;
 			}
 		}
-
-
 	}
 }

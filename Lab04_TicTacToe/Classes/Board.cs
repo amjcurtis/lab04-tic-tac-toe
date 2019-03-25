@@ -24,15 +24,9 @@ namespace Lab04_TicTacToe.Classes
             {
                 for (int y = 0; y < GameBoard.GetLength(1); y++)
                 {
-                    if (y != GameBoard.Length)
-                    {
-                        Console.Write($"|{GameBoard[x, y]}|");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"|{GameBoard[x, y]}|");
-                    }
+                    Console.Write($"|{GameBoard[x, y]}|");
                 }
+                Console.WriteLine();
             }
         }
 	}
