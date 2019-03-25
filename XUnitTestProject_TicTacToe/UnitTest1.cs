@@ -10,6 +10,7 @@ namespace XUnitTestProject_TicTacToe
         /// <summary>
         /// Given a game board, test for winners
         /// </summary>
+        /*
         [Fact]
         public void CanFindHorizontalWinner()
         {
@@ -30,6 +31,7 @@ namespace XUnitTestProject_TicTacToe
             bool answer = game.CheckForWinner(board);
             Assert.True(answer);
         }
+        */
 
         // Test 2: Test there's a switch in players between turns
 
@@ -37,11 +39,11 @@ namespace XUnitTestProject_TicTacToe
 
         // One other "unique" test of your own
 
-        [Fact]
-        public void Test1()
-        {
+        //[Fact]
+        //public void Test1()
+        //{
 
-        }
+        //}
 
 
     }
