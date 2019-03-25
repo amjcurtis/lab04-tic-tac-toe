@@ -47,8 +47,7 @@ namespace Lab04_TicTacToe
             Console.WriteLine("Let's play!");
             Game game = new Game(player1, player2);
             Player winner = game.Play();
-
-
+            Console.WriteLine($"And the winner is...{winner}!");
         }
     }
 }

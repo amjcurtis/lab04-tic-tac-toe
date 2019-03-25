@@ -34,11 +34,17 @@ namespace Lab04_TicTacToe.Classes
             //TODO: Complete this method and utilize the rest of the class structure to play the game.
 
             Board.DisplayBoard();
-
             int turns = 0;
-            //bool
+            // bool = 
 
-            return Winner;
+            while (turns < 9 && CheckForWinner() == false)
+            {
+
+
+                turns++;
+            }
+
+            return CheckForWinner();
 
             // WHILE (positions still open on board?)
             // Player1 takes turn
