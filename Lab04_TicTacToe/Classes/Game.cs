@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lab04_TicTacToe.Classes
 {
-	class Game
+    public class Game
 	{
 		public Player PlayerOne { get; set; }
 		public Player PlayerTwo { get; set; }
@@ -39,7 +39,7 @@ namespace Lab04_TicTacToe.Classes
 
             while (turns < 9 && CheckForWinner() == false)
             {
-
+                Player.TakeTurn(game.Board);
 
                 turns++;
             }
@@ -50,6 +50,8 @@ namespace Lab04_TicTacToe.Classes
             // Player1 takes turn
             // Show board
             // Prompt user to select position they want to play
+                // Call TakeTurn() method from Player class
+
             // Update board at desired position with player's mark (X or O)
             // Display updated board (or wait to show until next player's turn)?
             // Let player know when their turn is over
@@ -59,7 +61,6 @@ namespace Lab04_TicTacToe.Classes
             // Show board
             // Prompt user to select position, etc...
             // IF no winner yet, repeat game
-            // IF all 3 items in a given array in winners[][] jagged array are same as each other, we have a winner
 
 
             /*
@@ -111,12 +112,17 @@ namespace Lab04_TicTacToe.Classes
 				string b = Board.GameBoard[p2.Row, p2.Column];
 				string c = Board.GameBoard[p3.Row, p3.Column];
 
-				// TODO:  Determine a winner has been reached. 
-				// return true if a winner has been reached. 
-			
-			}
+                // TODO:  Determine a winner has been reached. 
 
-			return false;
+                // [IF all 3 items in a given array in "winners" jagged array are same as each other, we have a winner]
+                if ( (a == b) && (a == c) )
+                {
+                    // return true if a winner has been reached. 
+                    return true;
+                }
+            }
+
+            return false;
 		}
 
 

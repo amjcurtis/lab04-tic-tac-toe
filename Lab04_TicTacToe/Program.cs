@@ -3,22 +3,22 @@ using Lab04_TicTacToe.Classes;
 
 namespace Lab04_TicTacToe
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             PlayGame();
 
             Console.ReadLine();
         }
 
-        static void PlayGame()
+        public static void PlayGame()
         {
             // TODO: Setup your game here. Create an introduction. 
             // Create your players, and instantiate your Game class. 
             // Output to the console the winner
 
-            Console.WriteLine("Let's play tic tac toe!");
+            Console.WriteLine("Let's play Tic Tac Toe!");
             Console.WriteLine(" ");
 
             Console.WriteLine("Player 1, enter your name.");
@@ -47,7 +47,15 @@ namespace Lab04_TicTacToe
             Console.WriteLine("Let's play!");
             Game game = new Game(player1, player2);
             Player winner = game.Play();
-            Console.WriteLine($"And the winner is...{winner}!");
+
+            if (!(winner is null))
+            {
+                Console.WriteLine($"And the winner is...{winner.Name}!");
+            }
+            else
+            {
+                Console.WriteLine("The game was a draw!");
+            }
         }
     }
 }
