@@ -34,10 +34,13 @@ namespace XUnitTestProject_TicTacToe
         */
 
         // Test 2: Test there's a switch in players between turns
+        // Summary comment goes here
 
         // Test 3: Test to confirm that the position the player inputs correlates to the correct index of the array
+        // Summary comment goes here
 
         // One other "unique" test of your own
+        // Summary comment goes here
 
         //[Fact]
         //public void Test1()

@@ -16,6 +16,9 @@ namespace Lab04_TicTacToe.Classes
 			{"7", "8", "9"},
 		};
 
+        /// <summary>
+        /// Outputs board to console and is called at start of game, at each new turn in game, and at end of game
+        /// </summary>
 		public void DisplayBoard()
 		{
             //TODO: Output the board to the console

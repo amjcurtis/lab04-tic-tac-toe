@@ -5,6 +5,10 @@ namespace Lab04_TicTacToe
 {
     public class Program
     {
+        /// <summary>
+        /// Calls primary gameplay method
+        /// </summary>
+        /// <param name="args">string[] args</param>
         public static void Main(string[] args)
         {
             PlayGame();
@@ -12,6 +16,9 @@ namespace Lab04_TicTacToe
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// Displays intro view, creates players, instantiates Game class, and outputs winner to the console
+        /// </summary>
         public static void PlayGame()
         {
             // TODO: Setup your game here. Create an introduction. 
