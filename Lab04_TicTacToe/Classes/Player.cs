@@ -4,9 +4,10 @@ using System.Text;
 
 namespace Lab04_TicTacToe.Classes
 {
-    class Player
+    public class Player
     {
 		public string Name { get; set; }
+
 		/// <summary>
 		/// P1 is X and P2 will be O
 		/// </summary>
@@ -17,7 +18,11 @@ namespace Lab04_TicTacToe.Classes
 		/// </summary>
 		public bool IsTurn { get; set; }
 
-
+        /// <summary>
+        /// Gets board coordinate from player input
+        /// </summary>
+        /// <param name="board"></param>
+        /// <returns>position of coordinate chosen by player</returns>
 		public Position GetPosition(Board board)
 		{
 			Position desiredCoordinate = null;
@@ -28,10 +33,14 @@ namespace Lab04_TicTacToe.Classes
 				desiredCoordinate = PositionForNumber(position);
 			}
 			return desiredCoordinate;
-
 		}
 
 
+        /// <summary>
+        /// Returns chosen board position based on player choice passed in as argument
+        /// </summary>
+        /// <param name="position"></param>
+        /// <returns>new board position</returns>
 		public static Position PositionForNumber(int position)
 		{
 			switch (position)
@@ -50,7 +59,10 @@ namespace Lab04_TicTacToe.Classes
 			}
 		}
 
-	
+	    /// <summary>
+        /// Prompts player to take turn and calls GetPosition method 
+        /// </summary>
+        /// <param name="board"></param>
 		public void TakeTurn(Board board)
 		{
 			IsTurn = true;
@@ -66,6 +78,8 @@ namespace Lab04_TicTacToe.Classes
 			else
 			{
 				Console.WriteLine("This space is already occupied");
+                // Reset position like so? position = GetPosition(board);
+                // Need to have this if-else inside while loop that keeps looping until user gives valid input?
 			}
 		}
 	}

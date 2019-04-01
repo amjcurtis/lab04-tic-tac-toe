@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lab04_TicTacToe.Classes
 {
-	class Game
+    public class Game
 	{
 		public Player PlayerOne { get; set; }
 		public Player PlayerTwo { get; set; }
@@ -31,7 +31,7 @@ namespace Lab04_TicTacToe.Classes
 		public Player Play()
 		{
 
-			//TODO: Complete this method and utilize the rest of the class structure to play the game.
+            //TODO: Complete this method and utilize the rest of the class structure to play the game.
 
             /*
              * Complete this method by constructing the logic for the actual playing of Tic Tac Toe. 
@@ -47,15 +47,46 @@ namespace Lab04_TicTacToe.Classes
 
             Use any and all pre-existing methods in this program to help construct the method logic. 
              */
-		}
+
+            Board.DisplayBoard();
+            int turns = 0;
+            // bool = 
+
+            //while (turns < 9 && CheckForWinner() == false)
+            //{
+            //    Player.TakeTurn(game.Board);
+
+            //    turns++;
+            //}
+
+            //return CheckForWinner();
 
 
-		/// <summary>
-		/// Check if winner exists
-		/// </summary>
-		/// <param name="board">current state of the board</param>
-		/// <returns>if winner exists</returns>
-		public bool CheckForWinner(Board board)
+            // WHILE (positions still open on board?)
+            // Player1 takes turn
+            // Show board
+            // Prompt user to select position they want to play
+            // Call TakeTurn() method from Player class
+
+            // Update board at desired position with player's mark (X or O)
+            // Display updated board (or wait to show until next player's turn)?
+            // Let player know when their turn is over
+            // Check board for winner at end of each turn
+            // Switch to next player's turn
+            // Player2 takes turn
+            // Show board
+            // Prompt user to select position, etc...
+            // IF no winner yet, repeat game
+
+        }
+
+
+        /// <summary>
+        /// Check if winner exists
+        /// </summary>
+        /// <param name="board">current state of the board</param>
+        /// <returns>if winner exists</returns>
+        public bool CheckForWinner(Board board)
 		{
 			int[][] winners = new int[][]
 			{
@@ -82,12 +113,22 @@ namespace Lab04_TicTacToe.Classes
 				string b = Board.GameBoard[p2.Row, p2.Column];
 				string c = Board.GameBoard[p3.Row, p3.Column];
 
-				// TODO:  Determine a winner has been reached. 
-				// return true if a winner has been reached. 
-			
-			}
+                // TODO:  Determine a winner has been reached. 
 
-			return false;
+                // [IF all 3 items in a given array in "winners" jagged array are same as each other, we have a winner]
+                // Need to test for whether there are remaining blank positions on game board?
+                //if ( (a == b) && (a == c) )
+                //{
+                //    // return true if a winner has been reached. 
+                        Winner = (a == "X" ? Player1 : Player2)
+                            return true;
+                //    return true;
+                //}
+
+
+            }
+
+            return false;
 		}
 
 
@@ -107,10 +148,7 @@ namespace Lab04_TicTacToe.Classes
 		{
 			if (PlayerOne.IsTurn)
 			{
-              
 				PlayerOne.IsTurn = false;
-
-              
 				PlayerTwo.IsTurn = true;
 			}
 			else
@@ -119,7 +157,5 @@ namespace Lab04_TicTacToe.Classes
 				PlayerTwo.IsTurn = false;
 			}
 		}
-
-
 	}
 }
