@@ -120,8 +120,12 @@ namespace Lab04_TicTacToe.Classes
                 //if ( (a == b) && (a == c) )
                 //{
                 //    // return true if a winner has been reached. 
+                        Winner = (a == "X" ? Player1 : Player2)
+                            return true;
                 //    return true;
                 //}
+
+
             }
 
             return false;
